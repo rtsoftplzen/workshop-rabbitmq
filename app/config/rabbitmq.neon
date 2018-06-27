@@ -1,0 +1,22 @@
+extensions:
+    rabbitmq: Kdyby\RabbitMq\DI\RabbitMqExtension
+
+rabbitmq:
+    connection:
+        host: "127.0.0.1"
+        port: "5672"
+        user: "guest"
+        password: "guest"
+        vhost: /
+
+    producers:
+        example:
+            exchange: {name: example, type: direct}
+            queue: {name: example}
+            contentType: application/json
+
+    consumers:
+        example:
+            exchange: {name: example, type: direct}
+            queue: {name: example}
+            callback: [@App\Model\ExampleConsumer, process]

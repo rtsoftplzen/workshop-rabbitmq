@@ -1,0 +1,11 @@
+version: '2'
+services:
+
+  server_rabbitmq_worshop:
+    container_name: rabbitmq_worshop
+    build:
+      context: ./
+      dockerfile: dockerfile
+    volumes:
+      - ./../:/var/www/html
+      - ./files/supervisor/conf.d/:/etc/supervisor/conf.d

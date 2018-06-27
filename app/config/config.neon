@@ -1,0 +1,28 @@
+parameters:
+    appName: rtsoft-workshop-rabbit-mq
+    appTitle: RTsoft Workshop RabbitMq
+
+includes:
+    - model.neon
+    - rabbitmq.neon
+
+php:
+    date.timezone: Europe/Prague
+
+
+application:
+    errorPresenter: Error
+    mapping:
+        *: App\*Module\Presenter\*Presenter
+
+session:
+    name: %appName%
+    expiration: 14 days
+
+    loginExpiration: 14 days
+    shoppingCartExpiration: 14 days
+    storeRequestExpiration: 10 min
+
+extensions:
+    console: Kdyby\Console\DI\ConsoleExtension
+

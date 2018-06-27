@@ -1,0 +1,7 @@
+decorator:
+    Symfony\Component\Console\Command\Command:
+        tags: [kdyby.console.command]
+
+services:
+    - App\Model\ExampleConsumer
+    - App\Model\ExampleProducer

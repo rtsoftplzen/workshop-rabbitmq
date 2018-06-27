@@ -1,0 +1,12 @@
+{
+	"name": "rtsoftplzen/workshop-rabbitmq",
+	"description": "RabbitMq workshop.",
+	"homepage": "https://www.rtsoft.cz",
+	"require": {
+		"php": ">= 7.0.0",
+		"nette/nette": "~2.4.0",
+		"kdyby/rabbitmq": "^1.1",
+		"kdyby/console": "~2.6"
+	},
+	"minimum-stability": "stable"
+}

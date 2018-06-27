@@ -1,13 +1,13 @@
 # RabbitMQ Workshop
 
 ## Zprovoznění
-Pokud nechcete používat Nette aplikaci a chcete si pouze vyzkoušet webové rozhraní RabbitMQ a Supervisor s použitím přiloženého Docker kontejneru, můžete přeskočit na sekci [Docker](###docker) 
+Pokud nechcete používat Nette aplikaci a chcete si pouze vyzkoušet webové rozhraní RabbitMQ a Supervisor s použitím přiloženého Docker kontejneru, můžete přeskočit na sekci [Docker](#docker) 
 
 Pro korektní běh Nette aplikace je nutné v rootu projektu vytvořit složky `log` a `temp` a oběma složkám přidat oprávnění na čtení a zápis pro všechny uživatele. 
 
 Dále je potřeba spustit v rootu projektu příkaz `composer install`.  
 
-###Docker
+### Docker
 Součástí projektu je i připravený Docker kontejner, který obsahuje jak RabbitMQ, tak i Supervisor.
  
 Před spuštěním kontejneru je nutné zkopírovat soubor `docker-compose.EXAMPLE.override.yml` ve složce `docker/` a  pojmenovat ho `docker-compose.override.yml`. 
